@@ -71,7 +71,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                             </div>
                         </div>
                         <!-- Search Button Area -->
-                        <div class="search_button">
+                        <!-- <div class="search_button">
                             <a class="searchBtn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                         
@@ -81,7 +81,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                 <input type="submit" value="" class="d-none">
                                 <span class="searchBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
