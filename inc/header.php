@@ -71,7 +71,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                             </div>
                         </div>
                         <!-- Search Button Area -->
-                        <!-- <div class="search_button">
+                        <div class="search_button">
                             <a class="searchBtn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                         
@@ -81,7 +81,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                 <input type="submit" value="" class="d-none">
                                 <span class="searchBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
                             </form>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,3 +143,88 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
         </div>
     </header>
     <!-- ****** Header Area End ****** -->
+        <!-- ****** Welcome Post Area Start ****** -->
+        <section class="welcome-post-sliders owl-carousel">
+
+<!-- Single Slide -->
+<div class="welcome-single-slide">
+    <!-- Post Thumb -->
+    <img src="img/bg-img/slide-1.jpg" alt="">
+    <!-- Overlay Text -->
+    <div class="project_title">
+        <div class="post-date-commnents d-flex">
+            <a href="#">May 19, 2017</a>
+            <a href="#">5 Comment</a>
+        </div>
+        <a href="#">
+            <h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+        </a>
+    </div>
+</div>
+
+<!-- Single Slide -->
+<div class="welcome-single-slide">
+    <!-- Post Thumb -->
+    <img src="img/bg-img/slide-2.jpg" alt="">
+    <!-- Overlay Text -->
+    <div class="project_title">
+        <div class="post-date-commnents d-flex">
+            <a href="#">May 19, 2017</a>
+            <a href="#">5 Comment</a>
+        </div>
+        <a href="#">
+            <h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+        </a>
+    </div>
+</div>
+
+<!-- Single Slide -->
+<div class="welcome-single-slide">
+    <!-- Post Thumb -->
+    <img src="img/bg-img/slide-3.jpg" alt="">
+    <!-- Overlay Text -->
+    <div class="project_title">
+        <div class="post-date-commnents d-flex">
+            <a href="#">May 19, 2017</a>
+            <a href="#">5 Comment</a>
+        </div>
+        <a href="#">
+            <h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+        </a>
+    </div>
+</div>
+
+<!-- Single Slide -->
+<div class="welcome-single-slide">
+    <!-- Post Thumb -->
+    <img src="img/bg-img/slide-4.jpg" alt="">
+    <!-- Overlay Text -->
+    <div class="project_title">
+        <div class="post-date-commnents d-flex">
+            <a href="#">May 19, 2017</a>
+            <a href="#">5 Comment</a>
+        </div>
+        <a href="#">
+            <h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+        </a>
+    </div>
+</div>
+
+<!-- Single Slide -->
+<div class="welcome-single-slide">
+    <!-- Post Thumb -->
+    <img src="img/bg-img/slide-4.jpg" alt="">
+    <!-- Overlay Text -->
+    <div class="project_title">
+        <div class="post-date-commnents d-flex">
+            <a href="#">May 19, 2017</a>
+            <a href="#">5 Comment</a>
+        </div>
+        <a href="#">
+            <h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+        </a>
+    </div>
+</div>
+
+</section>
+<!-- ****** Welcome Area End ****** -->
