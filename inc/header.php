@@ -10,7 +10,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Destiny Child Blog - 데스티니 차일드 팬 페이지</title>
+    <title>Cooksin - 쿡신</title>
 
     <!-- Favicon -->
     <link rel="icon" href="/img/core-img/favicon.ico">
@@ -95,7 +95,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                 <!-- Logo Area Start -->
                 <div class="col-12">
                     <div class="logo_area text-center">
-                        <a href="/" class="yummy-logo">Destiny Child Blog</a>
+                        <a href="/" class="yummy-logo">내가 쿡신이다</a>
                     </div>
                 </div>
             </div>
