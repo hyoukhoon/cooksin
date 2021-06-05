@@ -18,7 +18,7 @@ $rs = $result->fetch_object();
 
 if(!empty($rs->num)){
 
-	$loginValue=array("SUNAME"=>$rs->nickName,"SEMAIL"=>$rs->email, "SNUM"=>$rs->num);
+	$loginValue=array("SUNAME"=>$rs->nickName,"SEMAIL"=>$rs->email, "SNUM"=>$rs->num, "SPHOTO"=>$rs->photo);
 	$_SESSION["loginValue"]=$loginValue;
 
 	$data=array("result"=>1,"val"=>"로그인 했습니다.");
