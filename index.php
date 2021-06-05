@@ -3,7 +3,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
 ?>
 
 <?PHP
-    $query6="SELECT *, (select count(*) from cboard_memo m where m.pa_num=c.num) as reply_cnt FROM cboard c where multi='child' order by cnt desc, good desc limit 10";
+    $query6="SELECT *, (select count(*) from cboard_memo m where m.pa_num=c.num) as reply_cnt FROM cboard c where multi='cooksin' order by cnt desc, good desc limit 10";
     $result6 = $mysqli->query($query6) or die("3:".$mysqli->error);
     while($rs6 = $result6->fetch_object()){
         $rsc6[]=$rs6;
