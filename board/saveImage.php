@@ -23,18 +23,18 @@ $gubun=$_POST['gubun'];
 			exit;
 		}
 
-        $name = "mp_".$now3.substr(rand(),0,4);
+        $name = "cs_".$now3.substr(rand(),0,4);
         $filename = $name.'.'.$ext;
 		$destination = '/var/www/cooksin/public_html/board/upImages/'.$filename;
         $location =  $_FILES["file"]["tmp_name"];
-		move_uploaded_file($location,$destination);
+		$rs=move_uploaded_file($location,$destination);
 		
 		if($gubun=="member"){
 			$query="update member set photo='/board/upImages/".$filename."' where email='".$_SESSION['loginValue']['SEMAIL']."'";
 			$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 		}
 
-
+		echo "rs=>".$rs;
         echo '/board/upImages/'.$filename;
 
 ?>
