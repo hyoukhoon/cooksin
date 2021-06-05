@@ -37,7 +37,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
     <!-- ****** Welcome Area End ****** -->
 
     <!-- ****** Categories Area Start ****** -->
-    <section class="categories_area clearfix" id="about">
+    <!-- <section class="categories_area clearfix" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
@@ -72,7 +72,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ****** Categories Area End ****** -->
 
     <!-- ****** Blog Area Start ****** -->
