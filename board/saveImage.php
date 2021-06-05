@@ -27,7 +27,11 @@ $gubun=$_POST['gubun'];
         $filename = $name.'.'.$ext;
 		$destination = '/var/www/cooksin/public_html/board/upImages/'.$filename;
         $location =  $_FILES["file"]["tmp_name"];
-		$rs=move_uploaded_file($location,$destination);
+		try {
+			$rs=move_uploaded_file($location,$destination);
+		}catch(Exception $e) {
+			print_r($e);
+		}
 		
 		if($gubun=="member"){
 			$query="update member set photo='/board/upImages/".$filename."' where email='".$_SESSION['loginValue']['SEMAIL']."'";
