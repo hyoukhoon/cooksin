@@ -27,6 +27,7 @@ $gubun=$_POST['gubun'];
         $filename = $name.'.'.$ext;
 		$destination = '/var/www/cooksin/public_html/board/upImages/'.$filename;
         $location =  $_FILES["file"]["tmp_name"];
+		echo "location=>".$location."<br>";
 		try {
 			$rs=move_uploaded_file($location,$destination);
 		}catch(Exception $e) {
@@ -38,7 +39,7 @@ $gubun=$_POST['gubun'];
 			$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 		}
 
-		echo "rs=>".$rs;
+		echo "rs=>".$rs."<br>";
         echo '/board/upImages/'.$filename;
 
 ?>
