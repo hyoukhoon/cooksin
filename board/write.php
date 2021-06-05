@@ -87,7 +87,7 @@ if(!$_SESSION['loginValue']['SEMAIL']){
                 <!-- Logo Area Start -->
                 <div class="col-12">
                     <div class="logo_area text-center">
-                        <a href="/" class="yummy-logo">Destiny Child Blog</a>
+                        <a href="/" class="yummy-logo">Cooksin Yummy Site</a>
                     </div>
                 </div>
             </div>
@@ -175,16 +175,16 @@ if(!$_SESSION['loginValue']['SEMAIL']){
 
                     <div class="col-12 col-md-12 item">
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
-                            <h2 class="contact-form-title mb-30">Please Write Your child</h2>
+                            <h2 class="contact-form-title mb-30">자유게시판입니다.</h2>
                             <!-- Contact Form -->
                             <form action="#" method="post">
                             <input type="hidden" name="imgUrl" id="imgUrl" value="">
                             <input type="hidden" name="attachFile" id="attachFile" value="">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="제목">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="childName" placeholder="Child name">
+                                    <input type="text" class="form-control" id="childName" placeholder="태그">
                                 </div>
                                 <div class="form-group">
                                     <div id="summernote"></div>
