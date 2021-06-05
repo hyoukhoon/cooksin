@@ -11,6 +11,8 @@ $email=$_SESSION['loginValue']['SEMAIL'];
 $multi="child";
 $gubun=$_POST['gubun'];
 
+print_r($_FILES);
+
 		if($_FILES['file']['size']>10240000){//10메가
 			echo "-1";
 			exit;
@@ -27,7 +29,7 @@ $gubun=$_POST['gubun'];
         $filename = $name.'.'.$ext;
 		$destination = '/var/www/cooksin/public_html/board/upImages/'.$filename;
         $location =  $_FILES["file"]["tmp_name"];
-		echo "location=>".$location."<br>";
+		
 		try {
 			$rs=move_uploaded_file($location,$destination);
 		}catch(Exception $e) {
@@ -39,7 +41,7 @@ $gubun=$_POST['gubun'];
 			$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 		}
 
-		echo "rs=>".$rs."<br>";
+		// echo "rs=>".$rs."<br>";
         echo '/board/upImages/'.$filename;
 
 ?>
