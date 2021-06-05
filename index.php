@@ -495,7 +495,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
                             <div class="about-me-widget-thumb">
                                 <img src="<?php echo $_SESSION['loginValue']['SPHOTO'];?>" alt="">
                             </div>
-                            <h4 class="font-shadow-into-light">Shopia Bernard</h4>
+                            <h4 class="font-shadow-into-light"><?php echo $_SESSION['loginValue']['SUNAME'];?></h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                         </div>
 
