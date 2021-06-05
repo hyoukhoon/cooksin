@@ -114,7 +114,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
                                         <a class="dropdown-item" href="/">Home</a>
-                                        <a class="dropdown-item" href="/child.php">게시판</a>
+                                        <a class="dropdown-item" href="/board/list.php">게시판</a>
                                         <a class="dropdown-item" href="/single.html">Single Blog</a>
                                         <a class="dropdown-item" href="/static.html">Static Page</a>
                                         <a class="dropdown-item" href="/contact.html">Contact</a>
@@ -127,7 +127,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                     <a class="nav-link" href="#">Categories</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="board.php">게시판</a>
+                                    <a class="nav-link" href="/board/list.php">게시판</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">About</a>
