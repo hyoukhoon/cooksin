@@ -25,7 +25,7 @@ $gubun=$_POST['gubun'];
 
         $name = "mp_".$now3.substr(rand(),0,4);
         $filename = $name.'.'.$ext;
-		$destination = '/var/www/decha/public_html/board/upImages/'.$filename;
+		$destination = '/var/www/cooksin/public_html/board/upImages/'.$filename;
         $location =  $_FILES["file"]["tmp_name"];
 		move_uploaded_file($location,$destination);
 		
