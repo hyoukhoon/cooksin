@@ -11,7 +11,7 @@ $email=$_SESSION['loginValue']['SEMAIL'];
 $multi="child";
 $gubun=$_POST['gubun'];
 
-print_r($_FILES);
+// print_r($_FILES);
 
 		if($_FILES['file']['size']>10240000){//10메가
 			echo "-1";
@@ -41,7 +41,6 @@ print_r($_FILES);
 			$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 		}
 
-		// echo "rs=>".$rs."<br>";
         echo '/board/upImages/'.$filename;
 
 ?>
