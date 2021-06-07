@@ -110,7 +110,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
                                         <a class="dropdown-item" href="/">Home</a>
@@ -119,15 +119,15 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                         <a class="dropdown-item" href="/static.html">Static Page</a>
                                         <a class="dropdown-item" href="/contact.html">Contact</a>
                                     </div>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">RECIPES</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
+                                    <a class="nav-link" href="#">FOOD</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Categories</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/board/list.php">게시판</a>
+                                    <a class="nav-link" href="/board/list.php?multi=free">FREE</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">About</a>
