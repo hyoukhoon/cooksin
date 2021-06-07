@@ -1,6 +1,5 @@
-<?php
-include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-
+<?php session_start();
+include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
 if(!$_SESSION['loginValue']['SEMAIL']){
     location_is('','','로그인하십시오.');
     exit;
