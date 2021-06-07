@@ -94,7 +94,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/footer.php";
 <script>
     $(document).ready(function () {
     var $summernote = $('#summernote').summernote({
-        airMode: true,
 		codeviewFilter: false,
 		codeviewIframeFilter: true,
         lang: 'ko-KR',
