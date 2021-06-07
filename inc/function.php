@@ -52,6 +52,26 @@ function auth_is($n){
 
 	}
 
+	function multi_is($n){
+
+		switch($n) {
+			
+			case "recipes":$rs="RECIPES";
+			break;
+			case "food":$rs="FOOD";
+			break;
+			case "restaurant":$rs="RESTAURANT";
+			break;
+			case "free":$rs="FREE";
+			break;
+
+		}
+
+		return $rs;
+
+	}
+
+
 function amount_is($gubun,$uid){
 	global $mysqli;
 

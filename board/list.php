@@ -1,7 +1,7 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
 
-$multi="cooksin";
+//$multi="cooksin";
 
 $que2="SELECT count(*) FROM cboard c where multi='".$multi."' $where";
 $result2 = $mysqli->query($que2) or die("3:".$mysqli->error);
@@ -30,6 +30,7 @@ $result = $mysqli->query($last_query) or die("3:".$mysqli->error);
 while($rs = $result->fetch_object()){
     $rsc[]=$rs;
 }
+
 
 ?>
 
