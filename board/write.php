@@ -1,6 +1,5 @@
-<?php 
-include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-
+<?php session_start();
+include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
 if(!$_SESSION['loginValue']['SEMAIL']){
     location_is('','','로그인하십시오.');
     exit;
@@ -9,36 +8,143 @@ if(!$_SESSION['loginValue']['SEMAIL']){
 $multi=$_GET["multi"];
 ?>
 
-<!-- Favicon -->
-<link rel="icon" href="/img/core-img/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="/img/core-img/favicon.ico">
 
-<!-- Core Stylesheet -->
-<link href="/style.css" rel="stylesheet">
+    <!-- Core Stylesheet -->
+    <link href="/style.css" rel="stylesheet">
 
-<!-- Responsive CSS -->
-<link href="/css/responsive/responsive.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="/css/responsive/responsive.css" rel="stylesheet">
 
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<style>
-.childImg {
-max-width:90%;
-padding-bottom:30px;
-margin-top:30px;
-line-height:170%;
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <style>
+ .childImg {
+	max-width:90%;
+    padding-bottom:30px;
+    margin-top:30px;
+    line-height:170%;
 
 }
 </style>
+
+  <div class="top_header_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 col-sm-6">
+                    <!--  Top Social bar start -->
+                    <div class="top_social_bar">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!--  Login Register Area -->
+                <div class="col-7 col-sm-6">
+                    <div class="signup-search-area d-flex align-items-center justify-content-end">
+                        <div class="login_register_area d-flex">
+                            <div class="login">
+                                <?php if($_SESSION['loginValue']['SEMAIL']){?>
+                                    Mypage |&nbsp; 
+                                <?php }else{?>
+                                    <a href="/member/login.php">Login</a>
+                                <?php }?>
+                            </div>
+                            <div class="register">
+                                <?php if($_SESSION['loginValue']['SEMAIL']){?>
+                                    Logout
+                                <?php }else{?>
+                                    <a href="/member/signup.php">Register</a>
+                                <?php }?>
+                            </div>
+                        </div>
+                        <!-- Search Button Area -->
+                        <!-- <div class="search_button">
+                            <a class="searchBtn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                        
+                        <div class="search-hidden-form">
+                            <form action="#" method="get">
+                                <input type="search" name="search" id="search-anything" placeholder="Search Anything...">
+                                <input type="submit" value="" class="d-none">
+                                <span class="searchBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </form>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****** Top Header Area End ****** -->
+    <!-- ****** Header Area Start ****** -->
+    <header class="header_area">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Area Start -->
+                <div class="col-12">
+                    <div class="logo_area text-center">
+                        <a href="/" class="yummy-logo">Cooksin Yummy Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav" aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                        <!-- Menu Area Start -->
+                        <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
+                            <ul class="navbar-nav" id="yummy-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                    <div class="dropdown-menu" aria-labelledby="yummyDropdown">
+                                        <a class="dropdown-item" href="/">Home</a>
+                                        <a class="dropdown-item" href="/child.php">child</a>
+                                        <a class="dropdown-item" href="/single.html">Single Blog</a>
+                                        <a class="dropdown-item" href="/static.html">Static Page</a>
+                                        <a class="dropdown-item" href="/contact.html">Contact</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/child.php">child</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
     <!-- ****** Breadcumb Area Start ****** -->
     <div class="breadcumb-area" style="background-image: url(/img/bg-img/breadcumb.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="bradcumb-title text-center">
-                        <h2><?php echo multi_is($multi);?></h2>
+                        <h2>WRITE</h2>
                     </div>
                 </div>
             </div>
@@ -51,7 +157,7 @@ line-height:170%;
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <li class="breadcrumb-item"><a href="#"><?php echo multi_is($multi);?></a></li>
+                            <li class="breadcrumb-item"><a href="#">Child</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><a href="#">Write</a></li>
                         </ol>
                     </nav>
@@ -71,7 +177,7 @@ line-height:170%;
 
                     <div class="col-12 col-md-12 item">
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
-                            <h2 class="contact-form-title mb-30"><?php echo multi_is($multi);?></h2>
+                            <h2 class="contact-form-title mb-30">자유게시판입니다.</h2>
                             <!-- Contact Form -->
                             <form action="#" method="post">
                             <input type="hidden" name="multi" id="multi" value="<?php echo $multi;?>">
@@ -104,19 +210,102 @@ line-height:170%;
     </div>
     <!-- ****** Contact Area End ****** -->
 
+    
+    </div>
+    <!-- ****** Our Creative Portfolio Area End ****** -->
 
+    <!-- ****** Footer Social Icon Area Start ****** -->
+    <div class="social_icon_area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-social-area d-flex">
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>facebook</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i><span>GOOGLE+</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i><span>linkedin</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i><span>VIMEO</span></a>
+                        </div>
+                        <div class="single-icon">
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i><span>YOUTUBE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****** Footer Social Icon Area End ****** -->
 
     <!-- ****** Footer Menu Area Start ****** -->
-    
-<?php
-include $_SERVER["DOCUMENT_ROOT"]."/inc/footer.php";
-?>
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content">
+                        <!-- Logo Area Start -->
+                        <div class="footer-logo-area text-center">
+                            <a href="/" class="yummy-logo">Destiny Child Blog</a>
+                        </div>
+                        <!-- Menu Area Start -->
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-footer-nav" aria-controls="yummyfood-footer-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                            <!-- Menu Area Start -->
+                            <div class="collapse navbar-collapse justify-content-center" id="yummyfood-footer-nav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Categories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">child</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Copywrite Text -->
+                    <div class="copy_right_text text-center">
+                        <p>Copyright @2020 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- ****** Footer Menu Area End ****** -->
 <script>
     $(document).ready(function () {
     var $summernote = $('#summernote').summernote({
-        //airMode: true,
 		codeviewFilter: false,
 		codeviewIframeFilter: true,
         lang: 'ko-KR',
