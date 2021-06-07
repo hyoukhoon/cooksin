@@ -40,12 +40,11 @@
                     <div class="footer-content">
                         <!-- Logo Area Start -->
                         <div class="footer-logo-area text-center">
-                            <a href="/" class="yummy-logo">Destiny Child Blog</a>
+                            <a href="/" class="yummy-logo">Cooksin Yummy Site</a>
                         </div>
                         <!-- Menu Area Start -->
-                        <nav class="navbar navbar-expand-lg">
+                        <!-- <nav class="navbar navbar-expand-lg">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-footer-nav" aria-controls="yummyfood-footer-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
-                            <!-- Menu Area Start -->
                             <div class="collapse navbar-collapse justify-content-center" id="yummyfood-footer-nav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item active">
@@ -68,7 +67,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </nav>
+                        </nav> -->
                     </div>
                 </div>
             </div>
