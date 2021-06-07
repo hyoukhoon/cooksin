@@ -127,10 +127,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                                     <a class="nav-link" href="/board/list.php?multi=food">FOOD</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/board/list.php?multi=free">FREE</a>
+                                    <a class="nav-link" href="/board/list.php?multi=restaurant">RESTAURANT</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/board/list.php?multi=restaurant">RESTAURANT</a>
+                                    <a class="nav-link" href="/board/list.php?multi=free">FREE</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact</a>
