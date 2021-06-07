@@ -40,7 +40,7 @@ while($rs = $result->fetch_object()){
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="bradcumb-title text-center">
-                        <h2>게시판</h2>
+                        <h2><?php echo multi_is($multi);?></h2>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ while($rs = $result->fetch_object()){
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">게시판</li>
+                            <li class="breadcrumb-item active" aria-current="page"><?php echo multi_is($multi);?></li>
                         </ol>
                     </nav>
                 </div>
