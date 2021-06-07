@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT']."/inc/dbconn.php";
  }
 $email=$_SESSION['loginValue']['SEMAIL'];
 $name=$_SESSION['loginValue']['SUNAME'];
-$multi="child";
+$multi=$_GET["multi"]??$_POST["multi"];
 
 	$subject=removeHackTag($_POST['subject']);
 	$childName=removeHackTag($_POST['childName']);

@@ -147,7 +147,7 @@ while($rs = $result->fetch_object()){
                             </ul>
                         </nav>
                         <div class="page-status">
-                            <a href="/board/write.php"><button type="button" class="btn btn-primary">WRITE</button></a>
+                            <a href="/board/write.php?multi=<?php echo $multi;?>"><button type="button" class="btn btn-primary">WRITE</button></a>
                         </div>
                     </div>
                 </div>

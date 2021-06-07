@@ -4,6 +4,8 @@ if(!$_SESSION['loginValue']['SEMAIL']){
     location_is('','','로그인하십시오.');
     exit;
 }
+
+$multi=$_GET["multi"];
 ?>
 
     <!-- Favicon -->
@@ -178,6 +180,7 @@ if(!$_SESSION['loginValue']['SEMAIL']){
                             <h2 class="contact-form-title mb-30">자유게시판입니다.</h2>
                             <!-- Contact Form -->
                             <form action="#" method="post">
+                            <input type="hidden" name="multi" id="multi" value="<?php echo $multi;?>">
                             <input type="hidden" name="imgUrl" id="imgUrl" value="">
                             <input type="hidden" name="attachFile" id="attachFile" value="">
                                 <div class="form-group">
@@ -364,6 +367,7 @@ function saveUp(){
 
 		var subject=$("#subject").val();
 		var childName=$("#childName").val();
+        var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
 		var content=$('#summernote').summernote('code');
 
@@ -379,8 +383,8 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl;
-		console.log(params);
+		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi;
+		//console.log(params);
 
 		$.ajax({
 			  type: 'post'
@@ -392,7 +396,7 @@ function saveUp(){
 
 				if(data.result==1){
 					alert('등록됐습니다.');
-					location.href='/child.php'
+					location.href='/lis.php?multi=<?php echo $multi;?>'
 				}else if(data.result==-1){
 					alert(data.val);
 					return;
