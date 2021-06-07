@@ -81,7 +81,7 @@ $multi=$_GET["multi"];
         </div>
     </div>
     <!-- ****** Contact Area End ****** -->
-
+    </div>
 
 
     <!-- ****** Footer Menu Area Start ****** -->
