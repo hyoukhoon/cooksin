@@ -110,7 +110,7 @@ $multi=$_GET["multi"];
     </div>
     <!-- ****** Our Creative Portfolio Area End ****** -->
 
-    
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/footer.php";?>    
 
     <!-- ****** Footer Menu Area End ****** -->
 <script>
