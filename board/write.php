@@ -6,10 +6,11 @@ if(!$_SESSION['loginValue']['SEMAIL']){
 }
 
 $multi=$_GET["multi"];
-
-
-
 ?>
+
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- ****** Breadcumb Area Start ****** -->
     <div class="breadcumb-area" style="background-image: url(/img/bg-img/breadcumb.jpg);">
@@ -85,7 +86,11 @@ $multi=$_GET["multi"];
 
  
     <!-- ****** Our Creative Portfolio Area End ****** -->
-
+<script>
+$(document).ready(function() {
+  $('#summernote').summernote();
+});
+</script>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/inc/footer.php";
 ?>
