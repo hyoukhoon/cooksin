@@ -94,6 +94,3 @@ $(document).ready(function() {
   $('#summernote').summernote();
 });
 </script>
-<?php
-include $_SERVER["DOCUMENT_ROOT"]."/inc/footer.php";
-?>
