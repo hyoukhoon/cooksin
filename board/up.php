@@ -11,9 +11,7 @@
 <body>
 
 
-                                <div class="form-group">
                                     <div id="summernote"></div>
-                                </div>
                                 <button type="button" class="btn contact-btn"  onclick="saveUp();">WRITE</button>
 
 
