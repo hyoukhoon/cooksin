@@ -12,7 +12,9 @@
   <div id="summernote"><p>Hello Summernote</p></div>
   <script>
     $(document).ready(function() {
-        $('#summernote').summernote();
+        $('.summernote').summernote({
+          airMode: true
+        });
     });
   </script>
 </body>
