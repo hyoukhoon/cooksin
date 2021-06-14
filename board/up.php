@@ -10,25 +10,12 @@
 </head>
 <body>
 
-<section class="archive-area section_padding_80">
-        <div class="container">
-            <div class="row">
 
-                    <div class="col-12 col-md-12 item">
-                        <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
-                            <form action="#" method="post">
-                            <input type="hidden" name="imgUrl" id="imgUrl" value="">
-                            <input type="hidden" name="attachFile" id="attachFile" value="">
                                 <div class="form-group">
                                     <div id="summernote"></div>
                                 </div>
                                 <button type="button" class="btn contact-btn"  onclick="saveUp();">WRITE</button>
-                            </form>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
+
 
   <script>
     $(document).ready(function() {
