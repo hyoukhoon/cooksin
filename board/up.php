@@ -28,7 +28,7 @@
                                     <input type="text" class="form-control" id="childName" placeholder="태그">
                                 </div>
                                 <div class="form-group">
-  <div id="summernote"><p>Hello Summernote</p></div>
+                                <div id="summernote"></div>
                                 </div>
                                 <div class="form-group">
                                     <div id="attach_site">
