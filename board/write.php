@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
