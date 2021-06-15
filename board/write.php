@@ -63,7 +63,7 @@ $multi=$_GET["multi"];
                                     <input type="text" class="form-control" id="childName" placeholder="태그">
                                 </div>
                                 <div class="form-group">
-                                    <div id="summernote"></div>
+                                    <div id="summernote">test</div>
                                 </div>
                                 <div class="form-group">
                                     <div id="attach_site">
