@@ -21,7 +21,7 @@ $multi=$_GET["multi"];
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="bradcumb-title text-center">
-                        <h2><?php echo multi_is($multi);?></h2>
+                        <h2><?php //echo multi_is($multi);?></h2>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ $multi=$_GET["multi"];
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><?php echo multi_is($multi);?></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?php //echo multi_is($multi);?></li>
                         </ol>
                     </nav>
                 </div>
@@ -50,7 +50,7 @@ $multi=$_GET["multi"];
 
                         <div class="col-12 col-md-12 item">
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
-                            <h2 class="contact-form-title mb-30"><?php echo multi_is($multi);?> 글쓰기</h2>
+                            <h2 class="contact-form-title mb-30"><?php //echo multi_is($multi);?> 글쓰기</h2>
                             <!-- Contact Form -->
                             <form action="#" method="post">
                             <input type="hidden" name="multi" id="multi" value="<?php echo $multi;?>">
