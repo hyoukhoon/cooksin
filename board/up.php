@@ -53,7 +53,24 @@
 </body>
 
 <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
+     $(document).ready(function() {
+      $('#nttCn').summernote({
+        placeholder: '글을 입력해 주세요',
+        height: 500,
+        lang: 'ko-KR',
+        toolbar: [
+                    // [groupName, [list of button]]
+                    ['Font Style', ['fontname']],
+                    ['style', ['bold', 'italic', 'underline']],
+                    ['font', ['strikethrough']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['paragraph']],
+                    ['height', ['height']],
+                    ['Insert', ['picture']],
+                    ['Insert', ['link']],
+                    ['Misc', ['fullscreen']]
+                 ]
+      });
     });
   </script>
