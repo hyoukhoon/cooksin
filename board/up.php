@@ -54,7 +54,7 @@
 
 <script>
      $(document).ready(function() {
-      $('#nttCn').summernote({
+      $('#summernote').summernote({
         placeholder: '글을 입력해 주세요',
         height: 500,
         lang: 'ko-KR',
