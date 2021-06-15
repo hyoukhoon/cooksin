@@ -1,9 +1,9 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-if(!$_SESSION['loginValue']['SEMAIL']){
-    location_is('','','로그인하십시오.');
-    exit;
-}
+// include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
+// if(!$_SESSION['loginValue']['SEMAIL']){
+//     location_is('','','로그인하십시오.');
+//     exit;
+// }
 
 $multi=$_GET["multi"];
 ?>
