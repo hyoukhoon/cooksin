@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </head>
-
+<body>
 <section class="archive-area section_padding_80">
         <div class="container">
             <div class="row">
@@ -53,8 +53,7 @@
             </div>
         </div>
     </section>  
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";?>    
-
+</body>
 <script>
     $(document).ready(function () {
     var $summernote = $('#summernote').summernote({
