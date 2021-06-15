@@ -40,7 +40,7 @@
                     <div class="footer-content">
                         <!-- Logo Area Start -->
                         <div class="footer-logo-area text-center">
-                            <a href="/" class="yummy-logo">Cooksin Yummy Site</a>
+                            <a href="/" class="yummy-logo">Cooksin Yummy</a>
                         </div>
                         <!-- Menu Area Start -->
                         <!-- <nav class="navbar navbar-expand-lg">
@@ -88,7 +88,7 @@
     <!-- ****** Footer Menu Area End ****** -->
 
     <!-- Jquery-2.2.4 js -->
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    
     <!-- Popper js -->
     <script src="/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap-4 js -->

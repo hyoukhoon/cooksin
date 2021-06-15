@@ -95,7 +95,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/inc/dbconn.php";
                 <!-- Logo Area Start -->
                 <div class="col-12">
                     <div class="logo_area text-center">
-                        <a href="/" class="yummy-logo">Cooksin Yummy Site</a>
+                        <a href="/" class="yummy-logo">Cooksin Yummy</a>
                     </div>
                 </div>
             </div>
