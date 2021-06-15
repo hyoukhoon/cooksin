@@ -54,26 +54,155 @@
         </div>
     </section>  
 </body>
-
 <script>
-     $(document).ready(function() {
-      $('#summernote').summernote({
-        placeholder: '글을 입력해 주세요',
-        height: 500,
+    $(document).ready(function () {
+    var $summernote = $('#summernote').summernote({
+		codeviewFilter: false,
+		codeviewIframeFilter: true,
         lang: 'ko-KR',
-        toolbar: [
-                    // [groupName, [list of button]]
-                    ['Font Style', ['fontname']],
-                    ['style', ['bold', 'italic', 'underline']],
-                    ['font', ['strikethrough']],
-                    ['fontsize', ['fontsize']],
-                    ['color', ['color']],
-                    ['para', ['paragraph']],
-                    ['height', ['height']],
-                    ['Insert', ['picture']],
-                    ['Insert', ['link']],
-                    ['Misc', ['fullscreen']]
-                 ]
-      });
+        height: 800,
+        callbacks: {
+            onImageUpload: function (files) {
+				for(var i=0; i < files.length; i++) {
+					if(i>20){
+						alert('20개까지만 등록할 수 있습니다.');
+						return;
+					}
+                }
+                for(var i=0; i < files.length; i++) {
+					if(i>20){
+						alert('20개까지만 등록할 수 있습니다.');
+						return;
+					}
+				sendFile($summernote, files[i]);
+			  } 
+                
+            }
+        }
     });
-  </script>
+});
+
+function sendFile($summernote, file) {
+    var formData = new FormData();
+    formData.append("file", file);
+    $.ajax({
+        url: '/board/saveImage.php',
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        type: 'POST',
+        success: function (data) {
+			if(data==-1){
+				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
+				return;
+			}else{
+				$summernote.summernote('insertImage', data, function ($image) {
+					$image.attr('src', data);
+					$image.attr('class', 'childImg');
+				});
+				var imgUrl=$("#imgUrl").val();
+				if(imgUrl){
+					imgUrl=imgUrl+",";
+				}
+				$("#imgUrl").val(imgUrl+data);
+			}
+        }
+    });
+
+}
+
+
+
+function saveUp(){
+
+		var subject=$("#subject").val();
+		var childName=$("#childName").val();
+        var multi=$("#multi").val();
+		var imgUrl=$("#imgUrl").val();
+		var content=$('#summernote').summernote('code');
+
+		if(!subject){
+			alert("제목을 입력하세요");
+			return;
+		}
+
+		if ($('#summernote').summernote('isEmpty')) {
+		  alert('내용을 입력하세요.');
+		  return;
+		}
+
+
+
+		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi;
+		//console.log(params);
+
+		$.ajax({
+			  type: 'post'
+			, url: 'saveUpOk.php'
+			,data : params
+			, dataType : 'json'
+			, success: function(data) {
+				//console.log(data.result);
+
+				if(data.result==1){
+					alert('등록됐습니다.');
+					location.href='/lis.php?multi=<?php echo $multi;?>'
+				}else if(data.result==-1){
+					alert(data.val);
+					return;
+				}else{
+					alert('다시 시도해 주십시오.');
+					return;
+				}
+			  }
+		});	
+
+}
+
+$("#afile").change(function(){
+
+var formData = new FormData();
+var files = $('#afile').prop('files');
+for(var i=0; i < files.length; i++) {
+    attachFile(files[i]);
+}
+
+
+});   
+
+function attachFile(file) {
+    var formData = new FormData();
+    formData.append("file", file);
+    $.ajax({
+        url: '/board/saveImage.php',
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        type: 'POST',
+        success: function (data) {
+			if(data==-1){
+				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
+				return;
+			}else{
+                var img="<img src='"+data+"' width='50'><br>";
+                $("#attachFiles").append(img);
+				
+                //$summernote.summernote('insertImage', data, function //($image) {
+				//	$image.attr('src', data);
+				//	$image.attr('class', 'childImg');
+				//});
+
+				var attachFie=$("#attachFie").val();
+				if(attachFie){
+					attachFie=attachFie+",";
+				}
+				$("#attachFie").val(attachFie+data);
+			}
+        }
+    });
+
+}
+
+</script>
